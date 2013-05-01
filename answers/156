@@ -1,1 +1,6 @@
 #(zipmap %2 (repeat %1))
+
+OR
+
+(fn [v sq] (loop [key sq, res {}] (if (empty? key) res (recur (rest key) (conj res [(first key) v])))))
+
