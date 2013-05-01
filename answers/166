@@ -1,0 +1,1 @@
+(fn [opr x y] (if (opr x y) :lt (if (opr y x) :gt :eq )))
