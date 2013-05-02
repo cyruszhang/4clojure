@@ -1,0 +1,12 @@
+
+#(loop [it %2, sqc %1] 
+    (if (= it 0) 
+        (first sqc) 
+        (recur (dec it) (rest sqc))
+    )
+ )
+
+OR
+
+#(first (drop %2 %1))
+

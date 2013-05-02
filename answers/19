@@ -1,0 +1,2 @@
+# tail recursion can use recur; otherwise name it
+(fn [s] (if (= (next s) nil) (first s) (recur (next s))))

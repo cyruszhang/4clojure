@@ -1,0 +1,4 @@
+#( (fn [s v] (if (= (next s) nil) v (recur (rest s) (first s)))) % 0)
+
+
+
