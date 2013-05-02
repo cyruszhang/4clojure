@@ -1,0 +1,14 @@
+(fn [coll] (filter #(if (= 1 (rem % 2)) true false) coll))
+
+OR
+
+#(filter odd? %)
+
+OR
+
+filter odd?
+
+OR
+
+filter #(> (mod % 2) 0)
+

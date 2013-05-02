@@ -1,0 +1,4 @@
+#(reduce (fn [x y] (conj x y)) '() %)
+
+conj behaves differently for list and vector; list is add to head; vector is to tail
+
