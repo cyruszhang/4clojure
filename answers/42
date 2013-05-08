@@ -1,0 +1,4 @@
+# use apply
+#(apply * (range 1 (inc %1)))
+
+

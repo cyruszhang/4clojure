@@ -1,1 +1,11 @@
 # fibonacci sequence
+
+# lazy sequence
+(= #(take % ((fn fib [a b] (cons a (lazy-seq (fib b (+ a b)))) ) 1 1)) 3) '(1 1 2))
+
+# ->> chaining macro
+(fn [n]
+ (->> [0 1]
+   (iterate (fn [[a b]] [b (+ a b)]))
+   (map second)
+   (take n)))

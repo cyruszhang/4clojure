@@ -1,0 +1,9 @@
+# looping
+#(loop [x %1 rt []] 
+   (if (< x %2)
+     (recur (inc x) (conj rt x))
+     rt))
+
+# take and iterate
+#(take (- %2 %1) (iterate inc %1))
+

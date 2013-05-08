@@ -1,0 +1,16 @@
+# use tree-seq, remove, coll?
+#(remove coll? (tree-seq coll? vec %))
+
+# use let, cond
+(fn fltn [n]
+  (let [[x & xs] n]
+    (cond
+     (empty? n) '()
+     (coll? x) (concat (fltn x) (fltn xs))
+     :else (cons x (fltn xs)))))
+
+# use mapcat;  map fltn to xs, and concat them together (result of fltn must be a coll)
+(fn fltn [xs]
+  (if (coll? xs)
+    (mapcat fltn xs)
+    [xs]))
